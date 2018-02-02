@@ -10,7 +10,7 @@ export class HomeService {
 
   getMessages = function () {
     return this.http
-    .get('http://localhost:8080/api/v1/message') // environment.apiBaseUrl + '/api/v1/message'
+    .get(environment.apiBaseUrl + '/api/v1/message') // 'http://localhost:8080/api/v1/message'
     .toPromise()
     .then(function(res){
       return res.json().messages;
@@ -23,7 +23,8 @@ export class HomeService {
   sendMessage = function (name, message) {
     let now = new Date();
     return this.http
-    .post('http://localhost:8080/api/v1/message', {'name': name, 'message': message, 'time': now.toLocaleString()})
+    .post(environment.apiBaseUrl +
+      '/api/v1/message', {'name': name, 'message': message, 'time': now.toLocaleString()}) // 'http://localhost:8080/api/v1/message'
     .toPromise()
     .then(function(res){
       console.log(res);
