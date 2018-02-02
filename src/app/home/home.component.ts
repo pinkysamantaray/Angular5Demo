@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   name;
   message;
-  dataSource;
+  dataSource = [];
 
   constructor(private homeService: HomeService) { }
 

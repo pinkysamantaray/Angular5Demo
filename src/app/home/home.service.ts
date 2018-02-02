@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response, RequestOptions, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class HomeService {
@@ -9,7 +10,7 @@ export class HomeService {
 
   getMessages = function () {
     return this.http
-    .get('http://localhost:8080/api/v1/message')
+    .get('http://localhost:8080/api/v1/message') // environment.apiBaseUrl + '/api/v1/message'
     .toPromise()
     .then(function(res){
       return res.json().messages;
