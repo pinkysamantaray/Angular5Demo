@@ -26,4 +26,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
+>ng generate module app-routing --flat --module=app
+>ng generate service home/home
+
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+>firebase init
+>firebase login:ci
+1/10Vf5LO0yyFlh8D5UE4Ep7otZIZJZUZONKHpK6QqAXY
+
+>Example: firebase deploy --token "$FIREBASE_TOKEN"
+>firebase use --add
+>firebase serve
+>firebase logout --token <token>

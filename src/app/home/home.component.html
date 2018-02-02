@@ -1,0 +1,27 @@
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Type Message" [(ngModel)]="message"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" (click)="send(name, message)">Send</button>
+</div>
+
+<div class="example-container" border="1" *ngIf="dataSource && dataSource.length > 0">
+  <br/>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Message</th>
+      <th>Date</th>
+    </tr>
+    <tr *ngFor="let data of dataSource" style="text-align:center">
+      <td>{{data.name}}</td>
+      <td>{{data.message}}</td>
+      <td>{{data.time}}</td>
+    </tr>
+  </table>
+</div>
