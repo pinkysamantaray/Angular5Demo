@@ -16,7 +16,8 @@ script:
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
   - cd dist
-  - git push https://heroku:d56fde01-a60a-4fb8-9317-aac6228a2499@git.heroku.com/angular5demo.git master 
+  - git push https://heroku:HEROKU_API_KEY@git.heroku.com/angular5demo.git master 
+  
 
 notifications:
   email:

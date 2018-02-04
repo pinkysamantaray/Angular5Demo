@@ -44,6 +44,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 >firebase serve
 >firebase logout --token <token>
 
+>heroku logs --app angular5demo
 
 ### https://angular5demo-pinky.firebaseapp.com/
 ### https://angular5demo.herokuapp.com/
+
